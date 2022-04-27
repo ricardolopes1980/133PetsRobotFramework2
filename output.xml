@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220427 18:37:39.065" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220427 19:36:50.725" rpa="false" schemaversion="3">
 <suite id="s1" name="Consulta Google" source="C:\Users\ricar\PycharmProjects\133PetsRobotFramework2\consulta_google.robot">
 <test id="s1-t1" name="Consulta Google" line="16">
 <kw name="Acessar o Chrome na pagina &lt;https://www.google.com.br&gt;" sourcename="Acessar o ${browser} na pagina &lt;${url}&gt;">
@@ -7,70 +7,75 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220427 18:37:39.268" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com.br'.</msg>
-<status status="PASS" starttime="20220427 18:37:39.267" endtime="20220427 18:37:41.623"/>
+<msg timestamp="20220427 19:36:50.987" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com.br'.</msg>
+<status status="PASS" starttime="20220427 19:36:50.986" endtime="20220427 19:36:53.430"/>
 </kw>
-<status status="PASS" starttime="20220427 18:37:39.267" endtime="20220427 18:37:41.623"/>
+<status status="PASS" starttime="20220427 19:36:50.986" endtime="20220427 19:36:53.431"/>
 </kw>
 <kw name="Digitar &quot;Ovos de Páscoa&quot; na pesquisa" sourcename="Digitar &quot;${palavra_chave}&quot; na pesquisa">
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${palavra_chave}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220427 18:37:41.625" level="INFO">${palavra_chave} = Ovos de Páscoa</msg>
-<status status="PASS" starttime="20220427 18:37:41.624" endtime="20220427 18:37:41.625"/>
+<msg timestamp="20220427 19:36:53.432" level="INFO">${palavra_chave} = Ovos de Páscoa</msg>
+<status status="PASS" starttime="20220427 19:36:53.432" endtime="20220427 19:36:53.432"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name = q</arg>
 <arg>${palavra_chave}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220427 18:37:41.625" level="INFO">Typing text 'Ovos de Páscoa' into text field 'name = q'.</msg>
-<status status="PASS" starttime="20220427 18:37:41.625" endtime="20220427 18:37:41.755"/>
+<msg timestamp="20220427 19:36:53.432" level="INFO">Typing text 'Ovos de Páscoa' into text field 'name = q'.</msg>
+<status status="PASS" starttime="20220427 19:36:53.432" endtime="20220427 19:36:53.559"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>name = q</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220427 18:37:41.755" level="INFO">Sending key(s) ('ENTER',) to name = q element.</msg>
-<msg timestamp="20220427 18:37:42.047" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20220427 18:37:42.047" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220427 18:37:41.755" endtime="20220427 18:37:44.743"/>
+<msg timestamp="20220427 19:36:53.560" level="INFO">Sending key(s) ('ENTER',) to name = q element.</msg>
+<msg timestamp="20220427 19:36:53.867" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220427 19:36:53.867" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220427 19:36:53.559" endtime="20220427 19:36:56.654"/>
 </kw>
-<status status="PASS" starttime="20220427 18:37:41.623" endtime="20220427 18:37:44.744"/>
+<status status="PASS" starttime="20220427 19:36:53.431" endtime="20220427 19:36:56.655"/>
 </kw>
 <kw name="Validar se aparece no titulo da guia o resultado esperado">
 <kw name="Get Title" library="SeleniumLibrary">
-<arg>${title}</arg>
+<var>${titulo}</var>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20220427 18:37:44.750" level="FAIL">Variable '${title}' not found.</msg>
-<status status="FAIL" starttime="20220427 18:37:44.745" endtime="20220427 18:37:44.750"/>
+<msg timestamp="20220427 19:36:56.664" level="INFO">${titulo} = Ovos de Páscoa - Pesquisa Google</msg>
+<status status="PASS" starttime="20220427 19:36:56.655" endtime="20220427 19:36:56.664"/>
 </kw>
-<kw name="Shold contain">
-<arg>${title}</arg>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${titulo}</arg>
 <arg>${palavra_chave}</arg>
-<status status="NOT RUN" starttime="20220427 18:37:44.759" endtime="20220427 18:37:44.759"/>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220427 19:36:56.664" endtime="20220427 19:36:56.664"/>
 </kw>
-<status status="FAIL" starttime="20220427 18:37:44.744" endtime="20220427 18:37:44.760"/>
+<status status="PASS" starttime="20220427 19:36:56.655" endtime="20220427 19:36:56.665"/>
 </kw>
 <kw name="Fechar o browser">
-<status status="NOT RUN" starttime="20220427 18:37:44.762" endtime="20220427 18:37:44.762"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220427 19:36:56.665" endtime="20220427 19:36:58.807"/>
+</kw>
+<status status="PASS" starttime="20220427 19:36:56.665" endtime="20220427 19:36:58.809"/>
 </kw>
 <tag>rapido</tag>
-<status status="FAIL" starttime="20220427 18:37:39.266" endtime="20220427 18:37:44.763">Variable '${title}' not found.</status>
+<status status="PASS" starttime="20220427 19:36:50.985" endtime="20220427 19:36:58.810"/>
 </test>
 <doc>Teste de consulta no buscador Google
 abre o navegador Chrome
 e raliza a consulta</doc>
-<status status="FAIL" starttime="20220427 18:37:39.068" endtime="20220427 18:37:44.769"/>
+<status status="PASS" starttime="20220427 19:36:50.726" endtime="20220427 19:36:58.812"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">rapido</stat>
+<stat pass="1" fail="0" skip="0">rapido</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Consulta Google">Consulta Google</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Consulta Google">Consulta Google</stat>
 </suite>
 </statistics>
 <errors>
