@@ -1,63 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220427 21:27:14.781" rpa="false" schemaversion="3">
-<suite id="s1" name="Consulta Petz" source="C:\Users\ricar\PycharmProjects\133PetsRobotFramework2\consulta_petz.robot">
-<test id="s1-t1" name="Consulta produto" line="14">
-<kw name="Dado que como cliente acessei o site">
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220427 21:38:26.420" rpa="false" schemaversion="3">
+<suite id="s1" name="Consulta Petz Prof" source="C:\Users\ricar\PycharmProjects\133PetsRobotFramework2\consulta_petz_prof.robot">
+<test id="s1-t1" name="Consulta Produto com Clique na Lupa" line="14">
+<kw name="Dado que acesso o site como cliente">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220427 21:27:15.001" level="INFO">Opening browser 'Chrome' to base url 'https://www.petz.com.br'.</msg>
-<status status="PASS" starttime="20220427 21:27:15.001" endtime="20220427 21:27:20.344"/>
+<msg timestamp="20220427 21:38:26.627" level="INFO">Opening browser 'Chrome' to base url 'https://www.petz.com.br'.</msg>
+<status status="PASS" starttime="20220427 21:38:26.627" endtime="20220427 21:39:17.691"/>
 </kw>
-<status status="PASS" starttime="20220427 21:27:15.001" endtime="20220427 21:27:20.345"/>
+<status status="PASS" starttime="20220427 21:38:26.627" endtime="20220427 21:39:17.691"/>
 </kw>
-<kw name="Quando inseri o texto &quot;Ração&quot; no campo de busca" sourcename="Quando inseri o texto &quot;${palavra_chave}&quot; no campo de busca">
+<kw name="Quando escrevo &quot;Ração&quot; na barra de pesquisa" sourcename="Quando escrevo &quot;${palavra_chave}&quot; na barra de pesquisa">
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${palavra_chave}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220427 21:27:20.348" level="INFO">${palavra_chave} = Ração</msg>
-<status status="PASS" starttime="20220427 21:27:20.347" endtime="20220427 21:27:20.348"/>
+<msg timestamp="20220427 21:39:17.692" level="INFO">${palavra_chave} = Ração</msg>
+<status status="PASS" starttime="20220427 21:39:17.692" endtime="20220427 21:39:17.692"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name = q</arg>
 <arg>${palavra_chave}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220427 21:27:20.349" level="INFO">Typing text 'Ração' into text field 'name = q'.</msg>
-<status status="PASS" starttime="20220427 21:27:20.348" endtime="20220427 21:27:20.491"/>
+<msg timestamp="20220427 21:39:17.693" level="INFO">Typing text 'Ração' into text field 'name = q'.</msg>
+<status status="PASS" starttime="20220427 21:39:17.693" endtime="20220427 21:39:17.796"/>
 </kw>
-<status status="PASS" starttime="20220427 21:27:20.346" endtime="20220427 21:27:20.491"/>
+<status status="PASS" starttime="20220427 21:39:17.692" endtime="20220427 21:39:17.796"/>
 </kw>
-<kw name="E cliquei no botao da lupa">
+<kw name="E clico no botao da lupa">
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>class= button-search</arg>
+<arg>button-search</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220427 21:27:20.493" level="INFO">Clicking button 'class= button-search'.</msg>
-<status status="PASS" starttime="20220427 21:27:20.492" endtime="20220427 21:27:20.606"/>
+<msg timestamp="20220427 21:39:17.797" level="INFO">Clicking button 'button-search'.</msg>
+<msg timestamp="20220427 21:39:18.105" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220427 21:39:18.106" level="FAIL">Button with locator 'button-search' not found.</msg>
+<status status="FAIL" starttime="20220427 21:39:17.797" endtime="20220427 21:39:18.109"/>
 </kw>
-<status status="PASS" starttime="20220427 21:27:20.491" endtime="20220427 21:27:20.606"/>
+<status status="FAIL" starttime="20220427 21:39:17.797" endtime="20220427 21:39:18.109"/>
+</kw>
+<kw name="Entao exibe um grid e a frase do resultado esperado">
+<status status="NOT RUN" starttime="20220427 21:39:18.110" endtime="20220427 21:39:18.110"/>
+</kw>
+<kw name="Feche o browser">
+<status status="NOT RUN" starttime="20220427 21:39:18.110" endtime="20220427 21:39:18.110"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220427 21:27:20.607" endtime="20220427 21:27:22.828"/>
+<status status="PASS" starttime="20220427 21:39:18.111" endtime="20220427 21:39:20.312"/>
 </kw>
 <tag>rapido</tag>
-<status status="PASS" starttime="20220427 21:27:15.000" endtime="20220427 21:27:22.828"/>
+<status status="FAIL" starttime="20220427 21:38:26.627" endtime="20220427 21:39:20.313">Button with locator 'button-search' not found.</status>
+</test>
+<test id="s1-t2" name="Consulta Produto Apertando Enter" line="22">
+<kw name="Dado que acesso o site como cliente">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220427 21:39:20.318" level="INFO">Opening browser 'Chrome' to base url 'https://www.petz.com.br'.</msg>
+<status status="PASS" starttime="20220427 21:39:20.317" endtime="20220427 21:39:25.073"/>
+</kw>
+<status status="PASS" starttime="20220427 21:39:20.316" endtime="20220427 21:39:25.073"/>
+</kw>
+<kw name="Quando escrevo &quot;Coleira&quot; na barra de pesquisa" sourcename="Quando escrevo &quot;${palavra_chave}&quot; na barra de pesquisa">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${palavra_chave}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220427 21:39:25.075" level="INFO">${palavra_chave} = Coleira</msg>
+<status status="PASS" starttime="20220427 21:39:25.073" endtime="20220427 21:39:25.075"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name = q</arg>
+<arg>${palavra_chave}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220427 21:39:25.075" level="INFO">Typing text 'Coleira' into text field 'name = q'.</msg>
+<status status="PASS" starttime="20220427 21:39:25.075" endtime="20220427 21:39:25.227"/>
+</kw>
+<status status="PASS" starttime="20220427 21:39:25.073" endtime="20220427 21:39:25.227"/>
+</kw>
+<kw name="E aperto a tecla Enter">
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>name = q</arg>
+<arg>ENTER</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20220427 21:39:25.229" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20220427 21:39:25.229" endtime="20220427 21:39:25.278"/>
+</kw>
+<status status="PASS" starttime="20220427 21:39:25.228" endtime="20220427 21:39:25.278"/>
+</kw>
+<kw name="Entao exibe um grid e a frase do resultado esperado">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css = h2Categoria.nomeCategoria</arg>
+<arg>Resultados para "${palavra_chave}"</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220427 21:39:25.417" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220427 21:39:25.418" level="FAIL">Element with locator 'css = h2Categoria.nomeCategoria' not found.</msg>
+<status status="FAIL" starttime="20220427 21:39:25.279" endtime="20220427 21:39:25.418"/>
+</kw>
+<status status="FAIL" starttime="20220427 21:39:25.279" endtime="20220427 21:39:25.419"/>
+</kw>
+<kw name="Feche o browser">
+<status status="NOT RUN" starttime="20220427 21:39:25.419" endtime="20220427 21:39:25.419"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220427 21:39:25.420" endtime="20220427 21:39:27.603"/>
+</kw>
+<tag>rapido</tag>
+<status status="FAIL" starttime="20220427 21:39:20.315" endtime="20220427 21:39:27.604">Element with locator 'css = h2Categoria.nomeCategoria' not found.</status>
 </test>
 <doc>Consultas no site da Petz</doc>
-<status status="PASS" starttime="20220427 21:27:14.783" endtime="20220427 21:27:22.830"/>
+<status status="FAIL" starttime="20220427 21:38:26.421" endtime="20220427 21:39:27.606"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">rapido</stat>
+<stat pass="0" fail="2" skip="0">rapido</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Consulta Petz">Consulta Petz</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="Consulta Petz Prof">Consulta Petz Prof</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220427 21:39:25.229" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
 </errors>
 </robot>
