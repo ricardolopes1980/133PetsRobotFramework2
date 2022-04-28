@@ -16,7 +16,7 @@ Consulta produto
     Dado que como cliente acessei o site
     Quando inseri o texto "Ração" no campo de busca
     E cliquei no botao da lupa
-#    Entao foi exibido o grid e a frase do resultado esperado
+    Entao foi exibido o grid e a frase do resultado esperado
 
 
 *** Keywords ***
@@ -30,9 +30,8 @@ Quando inseri o texto "${palavra_chave}" no campo de busca
     input text      name = q            ${palavra_chave}
 
 E cliquei no botao da lupa
-    click button    class= button-search
+    click button    class = button-search
 
-
-#Entao foi exibido o grid e a frase do resultado esperado
-#    element should contain      css = h2Categoria nomeCategoria     RESULTADOS PARA "${palavra_chave}"
+Entao foi exibido o grid e a frase do resultado esperado
+    element should contain      css = h1.h2Categoria nomeCategoria     RESULTADOS PARA "${palavra_chave}"
 
