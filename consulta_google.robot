@@ -33,7 +33,7 @@ Digitar "${palavra_chave}" na pesquisa
     press keys  name = q            ENTER
 
 Validar se aparece no titulo da guia o resultado esperado
-    ${titulo} =  get title
+    ${titulo}       get title
     Should contain  ${titulo}         ${palavra_chave}
 
 Fechar o browser
